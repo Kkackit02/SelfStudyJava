@@ -1,0 +1,11 @@
+package final_202112346;
+
+public class Decrementer implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

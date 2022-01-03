@@ -1,0 +1,10 @@
+package final_202112346;
+
+public class Incrementer {
+
+	Counter 
+	public Incrementer(int num)
+	{
+		
+	}
+}

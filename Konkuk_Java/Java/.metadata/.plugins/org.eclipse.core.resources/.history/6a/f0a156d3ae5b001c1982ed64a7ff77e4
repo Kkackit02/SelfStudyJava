@@ -1,0 +1,9 @@
+package final_202112346;
+
+public class Counter {
+	public Counter(int num)
+	{
+		
+	}
+
+}

@@ -1,0 +1,12 @@
+package final_202112346;
+
+public class Counter {
+	
+	int number = 0;
+	
+	public Counter(int num)
+	{
+		number = num;
+	}
+
+}

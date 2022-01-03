@@ -1,0 +1,69 @@
+package final_202112346;
+
+import java.lang.Thread.State;
+
+public class CounterTest {
+	
+
+	
+	
+	public static void main(String[] args) {
+		
+		
+		Counter counter = new Counter(5);
+		SyncCounter syncCounter = new SyncCounter(5);
+		
+		System.out.println("initial number w/o sync = " + counter.getNumber());
+		System.out.println("initial number with sync = " + syncCounter.getNumber());
+		
+		Incrementer incrementor = new Incrementer(counter);
+		Decrementer decrementor = new Decrementer(counter);
+		
+		Incrementer syncIncrementor = new Incrementer(syncCounter);
+		Decrementer syncDecrementor = new Decrementer(syncCounter);
+		
+		end_Checker end_checker = new end_Checker(counter, syncCounter);
+		
+		
+		Thread t1 = new Thread(incrementor);
+		Thread t2 = new Thread(syncIncrementor);
+		Thread t3 = new Thread(decrementor);
+		Thread t4 = new Thread(syncDecrementor);
+		
+		synchronized(b){
+            try{
+                // b.wait()메소드를 호출.
+                // 메인쓰레드는 정지
+                // ThreadB가 5번 값을 더한 후 notify를 호출하게 되면 wait에서 깨어남
+                System.out.println("b가 완료될때까지 기다립니다.");
+                b.wait();
+            }catch(InterruptedException e){
+                e.printStackTrace();
+            }
+
+		
+		Thread t5 = new Thread(end_checker);
+		
+		t1.start();
+		t2.start();
+		t3.start();
+		t4.start();
+		
+		t5.join();
+		
+
+		
+		System.out.println("All threads finished.");
+		
+		System.out.println("number w/o sync = " + counter.getNumber());
+		System.out.println("number with sync = " + syncCounter.getNumber());
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

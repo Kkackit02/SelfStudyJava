@@ -1,0 +1,12 @@
+package final_202112346;
+
+public class end_Checker implements Runnable {
+
+	public end_Checker(Counter )
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

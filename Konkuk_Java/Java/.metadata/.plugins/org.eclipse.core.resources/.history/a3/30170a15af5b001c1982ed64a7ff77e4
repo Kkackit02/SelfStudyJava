@@ -1,0 +1,14 @@
+package final_202112346;
+
+public class SyncCounter extends Counter {
+
+		
+	
+	public static void main(String[] args) {
+		
+		
+		
+
+	}
+
+}

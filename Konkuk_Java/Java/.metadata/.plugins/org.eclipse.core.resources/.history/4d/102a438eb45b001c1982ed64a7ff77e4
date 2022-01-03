@@ -1,0 +1,62 @@
+package final_202112346;
+
+import java.lang.Thread.State;
+
+public class CounterTest {
+	
+
+	
+	
+	public static void main(String[] args) {
+		
+		
+		Counter counter = new Counter(5);
+		SyncCounter syncCounter = new SyncCounter(5);
+		
+		System.out.println("initial number w/o sync = " + counter.getNumber());
+		System.out.println("initial number with sync = " + syncCounter.getNumber());
+		
+		Incrementer incrementor = new Incrementer(counter);
+		Decrementer decrementor = new Decrementer(counter);
+		
+		Incrementer syncIncrementor = new Incrementer(syncCounter);
+		Decrementer syncDecrementor = new Decrementer(syncCounter);
+		
+		Thread t1 = new Thread(incrementor);
+		Thread t2 = new Thread(syncIncrementor);
+		Thread t3 = new Thread(decrementor);
+		Thread t4 = new Thread(syncDecrementor);
+		
+		t1.start();
+		
+		try {
+			t1.join(); 
+	    } catch (InterruptedException e) {
+	            e.printStackTrace();
+	    }
+		t2.start();
+		try {
+			t2.join(); 
+	    } catch (InterruptedException e) {
+	            e.printStackTrace();
+	    }
+		
+		t3.start();
+		t4.start();
+		
+
+		
+		System.out.println("All threads finished.");
+		
+		System.out.println("number w/o sync = " + counter.getNumber());
+		System.out.println("number with sync = " + syncCounter.getNumber());
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,6 @@
+package final_202112346;
+
+public class SyncCounter extends Counter {
+
+	
+}

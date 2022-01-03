@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\rmssu\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\home\kkackit\SICT\SICT_Java_git\Java\.metadata\.plugins\org.eclipse.jdt.core
+3819998323.index
+1974655443.index

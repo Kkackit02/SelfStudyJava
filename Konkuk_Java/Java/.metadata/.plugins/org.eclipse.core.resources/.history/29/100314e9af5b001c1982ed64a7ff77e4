@@ -1,0 +1,12 @@
+package final_202112346;
+
+public class Incrementer implements Runnable {
+
+	Counter counter;
+	public Incrementer(Counter counter)
+	{
+		this.counter = counter;
+	}
+	
+	
+}

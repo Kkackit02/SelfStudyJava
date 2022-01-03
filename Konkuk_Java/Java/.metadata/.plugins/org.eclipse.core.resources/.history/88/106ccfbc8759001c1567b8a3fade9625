@@ -1,0 +1,10 @@
+package Thread_Test;
+
+public class TimerThread extends Thread {
+	
+	int n = 0;
+	
+	@Override
+	
+
+}

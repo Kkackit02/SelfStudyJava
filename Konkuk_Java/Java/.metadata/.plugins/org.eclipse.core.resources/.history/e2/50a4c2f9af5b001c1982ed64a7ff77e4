@@ -1,0 +1,31 @@
+package final_202112346;
+
+public class Incrementer implements Runnable {
+
+	Counter counter;
+	public Incrementer(Counter counter)
+	{
+		this.counter = counter;
+	}
+	
+	@Override
+	public void run()
+	{
+		System.out.println()
+		while(true)
+		{
+			System.out.println(n);
+			n++;
+			
+			try 
+			{
+				Thread.sleep(1000);
+			}
+			catch(InterruptedException e)
+			{
+				return;
+			}
+		}
+	}
+	
+}

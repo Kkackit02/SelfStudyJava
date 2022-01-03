@@ -1,0 +1,22 @@
+package final_202112346;
+
+public class SyncCounter extends Counter {
+
+	
+	public SyncCounter(int num) {
+		super(num);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void increment()
+	{
+		
+	}
+	
+	@Override
+	public void decrement()
+	{
+		
+	}
+}

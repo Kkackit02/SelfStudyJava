@@ -1,0 +1,17 @@
+package final_202112346;
+
+public class SyncCounter extends Counter {
+
+	
+	@Override
+	public void increment()
+	{
+		
+	}
+	
+	@Override
+	public void increment()
+	{
+		
+	}
+}
